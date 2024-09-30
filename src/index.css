@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set box-sizing to inherit for more control over layout */
+html {
+    box-sizing: border-box;
+}
+
+/* Ensure child elements respect box-sizing settings */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Reset for body */
+body {
+    font-family: 'Fredoka', sans-serif;
+    line-height: 1.6; /* Add a readable line-height */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    
+}
+
+::selection{
+    background-color:#4CCD99;
+}
+main{
+    background-color: #1F1E1E;
+    color: #fff;
+    min-height: 100vh;
+
+}
+main .body{
+    background-color: #353434;
+    width: 90%;
+}
+
+.body .input{
+    width: 50%;
+}
+.body .add button{
+    border: none;
+    background-color: #4CCD99;
+    color: #fff;
+}
+
+.body .header::after{
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-color: #afafaf83;
+    position: absolute;
+    bottom: -20px;
+    left:5% ;
+    margin: 0 auto;
+}
+.body .input input:focus{
+    border: #007F73 2px solid;
+    outline: none;
+    caret-color: #4CCD99;
+}
+.body .list button{
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    background-color:#474747;
+
+}
+
+
+.body .list .active{
+    background-color: #4CCD99;
+
+}
+.task {
+    height: auto;
+}
+.task .actions i{
+    font-size: 25px;
+    color: #4CCD99;
+}
+.task .actions i:hover{
+    cursor: pointer;
+}
+.task .details h3{
+    color: #4CCD99;
+}
+.task .details p{
+    width: 100%; 
+    max-width: 80%; 
+    overflow-wrap: break-word; 
+    white-space: normal; 
+    
+   
+   
+}
+.navbar .container-fluid{
+    width: 50%;
+}
+
+@media (max-width:769px){
+    .body .header{
+        flex-direction: column;
+
+    }
+    .body .input{
+       width: 100%;
+    }
+    .body .add button{
+       
+        width: 100px;
+    }
+    .task{
+        flex-direction: column;
+    }
+    .navbar .container-fluid{
+        width: 100%;
+    }
+   
+}
